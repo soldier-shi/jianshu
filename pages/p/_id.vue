@@ -169,6 +169,8 @@
                     <!--评论区-->
                     <div></div>
                 </div>
+                <!--回复组件-->
+                <my-comment></my-comment>
             </div>
             <!--悬浮的操作框-->
             <div class="side-bar"></div>
@@ -180,9 +182,10 @@
 
 <script>
     import myHeader from '~/components/myHeader'
+    import myComment from '~/components/myComment'
     export default {
         components:{
-            myHeader
+            myHeader,myComment
         },
         data(){
             return{
