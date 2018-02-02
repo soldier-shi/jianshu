@@ -185,7 +185,7 @@
     import myComment from '~/components/myComment'
     export default {
         components:{
-            myHeader,myComment
+            myHeader , myComment
         },
         data(){
             return{
