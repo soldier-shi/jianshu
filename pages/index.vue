@@ -7,7 +7,7 @@
                     <!--banner-->
                     <div v-swiper:mySwiper="swiperOption" class="banner">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide" v-for="banner in banners">
+                            <div class="swiper-slide" v-for="banner in banners" :key="banner">
                                 <img :src=banner>
                             </div>
                         </div>
