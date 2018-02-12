@@ -59,56 +59,56 @@
                 <!--导航-->
                 <div class="my-container">
                     <ul class="nav-list">
-                        <li class="active">
-                            <nuxt-link  to="/">
+                        <li>
+                            <nuxt-link active-class="active"  to="/" exact>
                                 <i class="fa fa-compass"></i>
                                 <span>发现</span>
                             </nuxt-link>
                         </li>
                         <li>
-                            <nuxt-link to="/">
+                            <nuxt-link active-class="active" to="/follow">
                                 <i class="fa fa-book"></i>
                                 <span>关注</span>
                             </nuxt-link>
                         </li>
                         <li class="notify" @mouseover="notifyShow=true" @mouseleave="notifyShow=false">
-                            <nuxt-link to="/">
+                            <nuxt-link active-class="active" to="/news">
                                 <i class="fa fa-bell-o"></i>
                                 <span>消息</span>
                             </nuxt-link>
                             <div class="drop-menu" v-show="notifyShow">
                                 <ul>
-                                    <li>
-                                        <nuxt-link to="/">
-                                            <i class="fa fa-comment-o"></i>
-                                            评论
-                                        </nuxt-link>
-                                    </li>
-                                    <li>
-                                        <nuxt-link to="/">
-                                            <i class="fa fa-envelope-open-o"></i>
-                                            简信
-                                        </nuxt-link>
-                                    </li>
-                                    <li>
-                                        <nuxt-link to="/">
-                                            <i class="fa fa-upload"></i>
-                                            投稿请求
-                                        </nuxt-link>
-                                    </li>
-                                    <li>
-                                        <nuxt-link to="/">
-                                            <i class="fa fa-heart-o"></i>
-                                            喜欢和赞
-                                        </nuxt-link>
-                                    </li>
-                                    <li>
-                                        <nuxt-link to="/">
-                                            <i class="fa fa-user-o"></i>
-                                            关注
-                                        </nuxt-link>
-                                    </li>
-                                </ul>
+                                <li>
+                                    <nuxt-link to="/news">
+                                        <i class="fa fa-comment-o"></i>
+                                        评论
+                                    </nuxt-link>
+                                </li>
+                                <li>
+                                    <nuxt-link to="/news/message">
+                                        <i class="fa fa-envelope-open-o"></i>
+                                        简信
+                                    </nuxt-link>
+                                </li>
+                                <li>
+                                    <nuxt-link to="/news/request">
+                                        <i class="fa fa-upload"></i>
+                                        投稿请求
+                                    </nuxt-link>
+                                </li>
+                                <li>
+                                    <nuxt-link to="/news/like">
+                                        <i class="fa fa-heart-o"></i>
+                                        喜欢和赞
+                                    </nuxt-link>
+                                </li>
+                                <li>
+                                    <nuxt-link to="/news/follow">
+                                        <i class="fa fa-user-o"></i>
+                                        关注
+                                    </nuxt-link>
+                                </li>
+                            </ul>
                             </div>
                         </li>
                         <li class="search">
@@ -131,10 +131,13 @@
             return {
                 userShow:false,
                 notifyShow:false,
-                bgShow:false,
+                bgShow:false
             }
         },
-        name:'myHeader'//给组件命名
+        name:'myHeader',//给组件命名
+        methods:{
+
+        }
     }
 
 </script>
@@ -286,9 +289,8 @@
         text-align:center;
         margin-top:5px;
     }
-    nav .nav-list>li.active {
-        color:#ea6f5a;
-        background:#fff;
+    nav .nav-list>li>a.active {
+        color:#ea6f5a!important;
     }
     nav .nav-list .search {
         padding-left:15px;
