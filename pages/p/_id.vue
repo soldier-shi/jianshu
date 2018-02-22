@@ -250,13 +250,13 @@
 
 <style scoped>
     .order{
-        background: white!important;
-        color:grey!important;
-        font-size: 12px;
-        border-radius: 20px;
-        padding: 1px 8px 1px 6px;
-        border-color: #7f828b!important;
-    }
+         background: white!important;
+         color:grey!important;
+         font-size: 12px;
+         border-radius: 20px;
+         padding: 1px 8px 1px 6px;
+         border-color: #7f828b!important;
+     }
     .likebtn{
         background-color: #ea6f5a;
     }

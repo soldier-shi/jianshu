@@ -153,4 +153,9 @@
             max-width: 100px;
         }
     }
+    @media (max-width: 750px) {
+        .follow{
+            overflow: hidden;
+        }
+    }
 </style>

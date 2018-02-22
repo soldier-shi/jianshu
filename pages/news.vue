@@ -108,7 +108,12 @@
             width: 750px!important;
         }
         .aside{
-            width: 218.75px;
+            width: 218.75px!important;
+        }
+    }
+    @media (max-width: 750px) {
+        .news-container{
+            overflow: hidden;
         }
     }
 </style>
